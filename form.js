@@ -31,6 +31,5 @@ const checkTelefono = (valor) => (expresiones.telefono.test(valor) ? true : fals
 // Funcion checkContraseña
 const checkContrasena = (valor) => (expresiones.password.test(valor) ? true : false);
 
-console.log(checkTelefono('1234567'));
 // Exportar modulos
 module.exports = { checkCorreo, checkApellido, checkNombre, checkTelefono, checkContrasena };
