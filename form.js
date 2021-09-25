@@ -27,19 +27,10 @@ const checkApellido = function (valor) {
   return expReg.test(valor) ? true : false;
 };
 // Funcion checkTelefono
-const checkTelefono = function (valor) {
-  if (Number.isInteger(valor)) {
-    const newValor = valor.toString().split('');
-    if (newValor.length === 7) {
-      return true;
-    } else {
-      return false;
-    }
-  } else {
-    return false;
-  }
-};
+const checkTelefono = (valor) => (expresiones.telefono.test(valor) ? true : false);
 // Funcion checkContraseña
 const checkContrasena = (valor) => (expresiones.password.test(valor) ? true : false);
+
+console.log(checkTelefono('1234567'));
 // Exportar modulos
 module.exports = { checkCorreo, checkApellido, checkNombre, checkTelefono, checkContrasena };
